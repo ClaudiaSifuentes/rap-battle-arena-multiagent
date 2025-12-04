@@ -193,21 +193,31 @@ uv (recomendado) o pip
 ### Instalación Rápida
 ```bash
 # Clonar repositorio
-git clone https://github.com/tuusuario/Rap_Battle_Arena_Multi-Agent.git
-cd Rap_Battle_Arena_Multi-Agent
+git clone https://github.com/ClaudiaSifuentes/rap-battle-arena-multiagent.git
+cd rap-battle-arena-multiagent
 
-# Instalar dependencias con uv (recomendado)
-uv sync
-
-# O con pip tradicional
-pip install -r requirements.txt
+# Configuración automática del proyecto
+./scripts/setup.sh
 ```
 
 ### Uso Básico
+
+#### Opción 1: Línea de Comandos (Básico)
 ```bash
 # Ejecutar batalla con configuración por defecto
 python main.py
 ```
+
+#### Opción 2: Aplicación Web Completa (Recomendado)
+```bash
+# Terminal 1: Backend API
+./scripts/run_backend.sh
+
+# Terminal 2: Frontend Web
+./scripts/run_frontend.sh
+```
+
+Luego abrir en el navegador: `http://localhost:5173`
 
 ### Ejemplo de Salida
 ```
@@ -233,12 +243,13 @@ GANADOR GLOBAL: A
 ## 📁 Estructura del Proyecto
 
 ```
-Rap_Battle_Arena_Multi-Agent/
+rap-battle-arena-multiagent/
 │
-├── 📄 main.py                 # 🚀 Punto de entrada principal
+├── 📄 main.py                 # 🚀 Punto de entrada básico
+├── 📄 api_main.py             # 🌐 Servidor API
 ├── 📄 pyproject.toml          # ⚙️ Configuración del proyecto
 ├── 📄 README.md               # 📚 Esta documentación
-├── 📄 uv.lock                 # 🔒 Lock de dependencias
+├── 📄 .env.example            # � Plantilla de configuración
 │
 ├── 📁 agents/                 # 🤖 Agentes del sistema
 │   ├── host_agent.py          # 🎭 Maestro de ceremonias
@@ -248,15 +259,39 @@ Rap_Battle_Arena_Multi-Agent/
 │   ├── sentiment_attack_agent.py # 😤 Análisis de agresividad
 │   └── moderation_agent.py    # 🛡️ Control de contenido
 │
-├── 📁 api/                    # 🌐 Clientes de API
+├── 📁 api/                    # 🌐 API REST
+│   ├── battle_api.py          # 🚀 Endpoints principales
+│   ├── schemas.py             # 📋 Esquemas de datos
 │   └── llm_client.py          # 🧠 Cliente LLM
 │
 ├── 📁 core/                   # 🔧 Lógica central
 │   ├── battle_engine.py       # ⚙️ Motor de batalla
 │   └── models.py              # 📊 Modelos de datos
 │
-└── 📁 personas/               # 🎭 Personalidades
-    └── personas.py            # 👥 Definiciones de raperos
+├── 📁 personas/               # 🎭 Personalidades de raperos
+│   └── personas.py            # 👥 Definiciones y estilos
+│
+├── 📁 frontend/               # 🎨 Interfaz web (React)
+│   ├── src/                   # 📱 Código fuente
+│   ├── package.json           # 📦 Dependencias Node.js
+│   └── vite.config.js         # ⚡ Configuración de Vite
+│
+├── 📁 config/                 # ⚙️ Configuración
+│   └── settings.py            # 🔧 Configuración centralizada
+│
+├── 📁 scripts/                # 🛠️ Scripts de automatización
+│   ├── setup.sh               # 🔧 Configuración inicial
+│   ├── run_backend.sh         # 🚀 Ejecutar backend
+│   └── run_frontend.sh        # 🎨 Ejecutar frontend
+│
+├── 📁 docs/                   # 📚 Documentación
+│   ├── API_README.md          # 📖 Documentación API
+│   ├── FRONTEND_SETUP.md      # 🎨 Configuración frontend
+│   └── AWS_SETUP.md           # ☁️ Configuración AWS
+│
+└── 📁 tests/                  # 🧪 Tests automatizados
+    ├── test_api.py            # 🌐 Tests de API
+    └── conftest.py            # ⚙️ Configuración de tests
 ```
 
 ## 🛠️ Desarrollo y Roadmap

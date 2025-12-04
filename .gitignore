@@ -11,6 +11,9 @@ __pycache__/
 *$py.class
 *.so
 
+# Logs de scripts
+scripts/*.log
+
 # Distribución / empaquetado
 .Python
 build/

@@ -4,10 +4,11 @@ from api.llm_client import generate_verse_llm
 
 
 class RapperAgent:
-    def __init__(self, rapper_id: str, persona_id: str, persona_config: Dict):
+    def __init__(self, rapper_id: str, persona_id: str, persona_config: Dict, additional_description: Optional[str] = None):
         self.rapper_id = rapper_id  
         self.persona_id = persona_id
         self.persona_config = persona_config
+        self.additional_description = additional_description
 
     def generate_verse(
         self,
@@ -22,6 +23,7 @@ class RapperAgent:
             persona=self.persona_config,
             topic=topic,
             last_opponent_verse=last_opponent_verse,
+            additional_description=self.additional_description,
             max_lines=4,
             max_words_per_line=11,
         )

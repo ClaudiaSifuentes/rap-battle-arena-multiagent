@@ -21,6 +21,7 @@ def build_rapper_prompt(
     persona: Dict,
     topic: str,
     last_opponent_verse: Optional[str] = None,
+    additional_description: Optional[str] = None,
     max_lines: int = 4,
     max_words_per_line: int = 11,
 ) -> str:
@@ -33,6 +34,15 @@ def build_rapper_prompt(
     base_instruction = f"""
     Eres un rapero de batalla en español llamado "{name}".
     Tu estilo es el siguiente: {style_desc}
+    """
+
+    if additional_description:
+        base_instruction += f"""
+    
+    Descripción adicional sobre ti: {additional_description}
+    """
+
+    base_instruction += f"""
 
     Estás en una batalla tipo torneo internacional de freestyle,
     similar a una God Level, frente a público en vivo.
@@ -43,16 +53,19 @@ def build_rapper_prompt(
     atacando al rival de forma ingeniosa, pero SIN insultos explícitos,
     SIN contenido discriminatorio y evitando lenguaje de odio.
 
+    Recuerda que eres un rapero de batalla, no un poeta. Intenta ser agresivo y competitivo.
+    Tambien intenta señirte al tema de la ronda, pero no te repitas.
+
     Reglas de formato:
     - Máximo {max_lines} líneas.
     - Cada línea con menos de {max_words_per_line} palabras.
-    - No expliques nada, responde SOLO con el verso.
+    - No expliques nada, asegurate de respoder SOLO con el verso.
     """
 
     if last_opponent_verse:
         base_instruction += f"""
 
-        Este fue el verso anterior del oponente, respóndele directamente:
+        Este fue el verso anterior del oponente, asegurate de no repetir lo que dijo el oponente y respónderle directamente:
 
         \"\"\"{last_opponent_verse}\"\"\"
         """
@@ -98,6 +111,7 @@ def generate_verse_llm(
     persona: Dict,
     topic: str,
     last_opponent_verse: Optional[str] = None,
+    additional_description: Optional[str] = None,
     max_lines: int = 4,
     max_words_per_line: int = 11,
     max_tokens: int = 256,
@@ -110,6 +124,7 @@ def generate_verse_llm(
         persona=persona,
         topic=topic,
         last_opponent_verse=last_opponent_verse,
+        additional_description=additional_description,
         max_lines=max_lines,
         max_words_per_line=max_words_per_line,
     )
@@ -147,6 +162,13 @@ def generate_verse_llm(
                 raw_text += block.get("text", "") + "\n"
 
     raw_text = raw_text.strip()
+    
+    # Crop from beginning if more than max_lines
+    if raw_text:
+        lines = raw_text.split("\n")
+        if len(lines) > max_lines:
+            lines = lines[-max_lines:]  # Keep only the last max_lines
+            raw_text = "\n".join(lines)
 
     if not raw_text:
         return "No tengo palabras, pero esta batalla sigue encendida."
