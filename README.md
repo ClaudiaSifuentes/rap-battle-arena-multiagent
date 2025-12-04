@@ -301,42 +301,6 @@ rap-battle-arena-multiagent/
     └── conftest.py            # ⚙️ Configuración de tests
 ```
 
-## 🛠️ Desarrollo y Roadmap
-
-### ✅ Fase 1: Diseño y Arquitectura (Completada)
-- [x] Definición de agentes y responsabilidades
-- [x] Modelos de datos bien estructurados
-- [x] Flujo completo de batalla
-- [x] Documentación técnica detallada
-
-### ✅ Fase 2: Motor Básico (Completada)
-- [x] Implementación de todos los agentes
-- [x] Motor de batalla funcional
-- [x] Sistema de puntuación ponderada
-- [x] API REST completa con FastAPI
-- [x] Interfaz web con React/Vite
-- [x] Scripts de automatización
-- [x] Estructura de proyecto organizada
-- [ ] Suite completa de tests unitarios
-
-### 🚧 Fase 3: Integración Inteligente (En Progreso)
-- [x] Base para integración con LLMs
-- [ ] Integración con AWS Bedrock
-- [ ] Integración con OpenAI GPT
-- [ ] Generación inteligente de versos
-- [ ] Análisis semántico avanzado
-- [ ] Personalidades más sofisticadas
-- [ ] Sistema de aprendizaje adaptativo
-
-### 📋 Fase 4: Experiencia Completa (Futuro)
-- [ ] Sistema de torneos multi-eliminación
-- [ ] Métricas avanzadas y analytics
-- [ ] Base de datos para historial de batallas
-- [ ] Sistema de usuarios y perfiles
-- [ ] Streaming en vivo de batallas
-- [ ] Integración con redes sociales
-- [ ] Modo multijugador
-
 ## 📊 Tecnologías Utilizadas
 
 ### Backend
@@ -587,4 +551,5 @@ cd frontend && npm run build
 
 # Servir con nginx o similar
 # TODO: Añadir configuración de nginx
+
 ```
