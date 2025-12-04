@@ -1,8 +1,11 @@
 # 🎤 Rap Battle Arena Multi-Agent
 
 ![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
-![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)
+![React](https://img.shields.io/badge/React-18-blue.svg)
+![Status](https://img.shields.io/badge/status-MVP%20Completo-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Contributions](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 Un sistema multi-agente inteligente que simula batallas de rap 1 vs 1, donde raperos virtuales con diferentes personalidades generan versos y agentes especializados analizan técnicamente cada performance para determinar automáticamente al ganador.
 
@@ -22,6 +25,10 @@ Diseñar e implementar un sistema multi-agente que simule batallas de rap 1 vs 1
 - ⚖️ **Juicio Automático**: Sistema de puntuación objetivo y transparente
 - 🛡️ **Moderación de Contenido**: Filtros automáticos para contenido apropiado
 - 🔄 **Batallas Completas**: Sistema de rondas con ganador global
+- 🌐 **API REST**: Interfaz completa para integración externa
+- 🎨 **Interfaz Web**: Frontend moderno con React y Vite
+- 🚀 **Despliegue Fácil**: Scripts automatizados para desarrollo y producción
+- ⚙️ **Configuración Flexible**: Sistema de configuración centralizado
 
 
 ## 🤖 Arquitectura del Sistema
@@ -302,23 +309,71 @@ rap-battle-arena-multiagent/
 - [x] Flujo completo de batalla
 - [x] Documentación técnica detallada
 
-### 🔄 Fase 2: Motor Básico (En Progreso)
+### ✅ Fase 2: Motor Básico (Completada)
 - [x] Implementación de todos los agentes
 - [x] Motor de batalla funcional
 - [x] Sistema de puntuación ponderada
+- [x] API REST completa con FastAPI
+- [x] Interfaz web con React/Vite
+- [x] Scripts de automatización
+- [x] Estructura de proyecto organizada
 - [ ] Suite completa de tests unitarios
 
-### 🚧 Fase 3: Integración Inteligente (Próximo)
+### 🚧 Fase 3: Integración Inteligente (En Progreso)
+- [x] Base para integración con LLMs
 - [ ] Integración con AWS Bedrock
-- [ ] Generación de versos con LLM
+- [ ] Integración con OpenAI GPT
+- [ ] Generación inteligente de versos
 - [ ] Análisis semántico avanzado
 - [ ] Personalidades más sofisticadas
+- [ ] Sistema de aprendizaje adaptativo
 
 ### 📋 Fase 4: Experiencia Completa (Futuro)
-- [ ] Interface web interactiva
-- [ ] Sistema de torneos
+- [ ] Sistema de torneos multi-eliminación
 - [ ] Métricas avanzadas y analytics
-- [ ] API REST para integración externa
+- [ ] Base de datos para historial de batallas
+- [ ] Sistema de usuarios y perfiles
+- [ ] Streaming en vivo de batallas
+- [ ] Integración con redes sociales
+- [ ] Modo multijugador
+
+## 📊 Tecnologías Utilizadas
+
+### Backend
+- **Python 3.8+** - Lenguaje principal
+- **FastAPI** - Framework web moderno y rápido
+- **Uvicorn** - Servidor ASGI de alto rendimiento
+- **Pydantic** - Validación de datos con tipos
+
+### Frontend
+- **React 18** - Biblioteca de interfaz de usuario
+- **Vite** - Herramienta de construcción rápida
+- **JavaScript ES6+** - Lenguaje del frontend
+- **CSS3** - Estilos y animaciones
+
+### Herramientas de Desarrollo
+- **uv** - Gestor de dependencias Python ultra-rápido
+- **npm** - Gestor de paquetes Node.js
+- **Git** - Control de versiones
+- **Make** - Automatización de tareas
+- **Bash Scripts** - Scripts de automatización
+
+### Arquitectura
+- **Multi-Agent System** - Patrón de agentes especializados
+- **REST API** - Comunicación cliente-servidor
+- **Separation of Concerns** - Separación clara de responsabilidades
+- **Configuration Management** - Gestión centralizada de configuración
+
+## 📈 Estadísticas del Proyecto
+
+```
+Líneas de Código:    ~2,500
+Archivos Python:     ~15
+Componentes React:   ~8
+Agentes IA:          6
+Personalidades:      3+
+API Endpoints:       5+
+```
 
 ## 🤝 Contribuir
 
@@ -330,6 +385,24 @@ rap-battle-arena-multiagent/
 4. **Push** a la rama (`git push origin feature/NuevaPersonalidad`)
 5. **Abre** un Pull Request
 
+### Tipos de Contribuciones
+
+- 🎤 **Nuevas Personalidades**: Añadir estilos únicos de rap
+- 🧠 **Algoritmos de IA**: Mejorar análisis técnico
+- 🎨 **Mejoras de UI/UX**: Hacer la interfaz más atractiva
+- 🧪 **Tests**: Añadir cobertura de testing
+- 📚 **Documentación**: Mejorar guías y ejemplos
+- 🐛 **Bug Fixes**: Corregir errores encontrados
+- ⚡ **Optimizaciones**: Mejorar rendimiento
+
+### Guidelines de Desarrollo
+
+- Seguir las convenciones de código existentes
+- Añadir tests para nuevas funcionalidades
+- Actualizar documentación según sea necesario
+- Usar mensajes de commit descriptivos en español
+- Mantener las funciones pequeñas y enfocadas
+
 ## 📄 Licencia
 
 Este proyecto está bajo la **Licencia MIT** - ver el archivo [LICENSE](LICENSE) para detalles.
@@ -337,7 +410,10 @@ Este proyecto está bajo la **Licencia MIT** - ver el archivo [LICENSE](LICENSE)
 ## 👥 Autores y Reconocimientos
 
 ### Autores
-- **Tu Nombre** - *Desarrollo inicial* - [@tuusuario](https://github.com/tuusuario)
+- **Claudia Sifuentes** - [@ClaudiaSifuentes](https://github.com/ClaudiaSifuentes)
+- **Marcelo Poggi** - [@Singoe123](https://github.com/Singoe123)
+- **Sebastian Valdivia** - [@sebasvp2005](https://github.com/sebasvp2005)
+- **Daniella Vargas** - [@lucumango](https://github.com/lucumango)
 
 ### Inspiración y Reconocimientos
 - 🎤 **God Level** - Por las batallas de rap épicas que inspiraron este proyecto
@@ -350,10 +426,165 @@ Este proyecto está bajo la **Licencia MIT** - ver el archivo [LICENSE](LICENSE)
 
 **🎤 ¡Que comience la batalla de rimas más épica! 🎤**
 
-[![Reportar Bug](https://img.shields.io/badge/🐛-Reportar%20Bug-red)](https://github.com/tuusuario/Rap_Battle_Arena_Multi-Agent/issues)
-[![Solicitar Feature](https://img.shields.io/badge/✨-Solicitar%20Feature-blue)](https://github.com/tuusuario/Rap_Battle_Arena_Multi-Agent/issues)
-[![Documentación](https://img.shields.io/badge/📚-Documentación-green)](https://github.com/tuusuario/Rap_Battle_Arena_Multi-Agent/wiki)
+[![Reportar Bug](https://img.shields.io/badge/🐛-Reportar%20Bug-red)](https://github.com/ClaudiaSifuentes/rap-battle-arena-multiagent/issues)
+[![Solicitar Feature](https://img.shields.io/badge/✨-Solicitar%20Feature-blue)](https://github.com/ClaudiaSifuentes/rap-battle-arena-multiagent/issues)
+[![Documentación](https://img.shields.io/badge/📚-Documentación-green)](https://github.com/ClaudiaSifuentes/rap-battle-arena-multiagent/wiki)
 
 *"En el ring de las palabras, solo los mejores algoritmos sobreviven"*
 
 </div>
+
+## 🛠️ Comandos Make (Opcional)
+
+Si prefieres usar Make para gestionar el proyecto:
+
+```bash
+make help          # Ver todos los comandos disponibles
+make setup         # Configuración inicial completa
+make backend       # Ejecutar solo backend
+make frontend      # Ejecutar solo frontend
+make basic         # Ejecutar versión de consola
+make clean         # Limpiar archivos temporales
+make status        # Ver estado del proyecto
+make urls          # Ver URLs importantes
+```
+
+## ⚙️ Configuración Avanzada
+
+### Variables de Entorno
+
+Crea un archivo `.env` basado en `.env.example`:
+
+```bash
+# Copiar plantilla de configuración
+cp .env.example .env
+```
+
+Configurar las variables según tus necesidades:
+
+```env
+# API Keys (opcionales para desarrollo básico)
+OPENAI_API_KEY=tu_clave_openai_aqui
+AWS_ACCESS_KEY_ID=tu_aws_access_key
+AWS_SECRET_ACCESS_KEY=tu_aws_secret_key
+AWS_REGION=us-east-1
+
+# Configuración de batalla
+BATTLE_ROUNDS=3
+JUDGE_STRICT_MODE=true
+MODERATION_LEVEL=medium
+
+# Configuración del servidor
+HOST=0.0.0.0
+PORT=8000
+DEBUG=true
+```
+
+### Personalización de Agentes
+
+Puedes modificar las personalidades de los raperos en `personas/personas.py`:
+
+```python
+RAPPER_PERSONAS = {
+    "tu_nueva_personalidad": {
+        "style": "Tu estilo único",
+        "strengths": ["característica 1", "característica 2"],
+        "weaknesses": ["debilidad 1"],
+        "vocabulary": "tipo de vocabulario",
+        "flow_pattern": "patrón de flow"
+    }
+}
+```
+
+### Configuración de Puntuación
+
+Ajusta los pesos de evaluación en `config/settings.py`:
+
+```python
+DEFAULT_SCORING_WEIGHTS = {
+    'rhyme': 0.30,      # Peso de la rima
+    'metric': 0.25,     # Peso de la métrica
+    'attack': 0.25,     # Peso del ataque
+    'sentiment': 0.15,  # Peso del sentimiento
+    'penalty': -0.05    # Penalización
+}
+```
+
+## 🔧 Troubleshooting
+
+### Problemas Comunes
+
+#### ❌ **Error: "Failed to fetch"**
+```bash
+# Solución: Verificar que ambos servidores estén corriendo
+./scripts/run_backend.sh    # Terminal 1
+./scripts/run_frontend.sh   # Terminal 2
+```
+
+#### ❌ **Error: "Port 8000 already in use"**
+```bash
+# Solución: Cambiar puerto o matar proceso
+export PORT=8080  # Cambiar puerto
+# O matar proceso existente
+lsof -ti:8000 | xargs kill -9
+```
+
+#### ❌ **Error: "Node.js not found"**
+```bash
+# Solución: Instalar Node.js
+# Ubuntu/Debian:
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# O usar nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm install 18
+```
+
+#### ❌ **Error: Permission denied en scripts**
+```bash
+# Solución: Hacer scripts ejecutables
+chmod +x scripts/*.sh
+```
+
+### FAQ (Preguntas Frecuentes)
+
+**Q: ¿Puedo usar el proyecto sin API keys?**
+A: Sí, el sistema funciona con versos pre-generados. Las API keys solo son necesarias para generación automática con LLMs.
+
+**Q: ¿Cómo añado nuevas personalidades de raperos?**
+A: Edita el archivo `personas/personas.py` y añade tu nueva personalidad siguiendo el formato existente.
+
+**Q: ¿El proyecto funciona en Windows?**
+A: Sí, pero recomendamos usar Git Bash o WSL para ejecutar los scripts bash.
+
+**Q: ¿Puedo cambiar los criterios de puntuación?**
+A: Sí, modifica los pesos en `config/settings.py` o usa variables de entorno.
+
+**Q: ¿Cómo contribuyo al proyecto?**
+A: Haz un fork, crea una rama, desarrolla tu feature y envía un pull request.
+
+## 🚀 Despliegue en Producción
+
+### Docker (Recomendado)
+
+```bash
+# TODO: Implementar Dockerfile
+# docker build -t rap-battle-arena .
+# docker run -p 8000:8000 rap-battle-arena
+```
+
+### Manual
+
+```bash
+# Configurar para producción
+export DEBUG=false
+export HOST=0.0.0.0
+export PORT=80
+
+# Construir frontend
+cd frontend && npm run build
+
+# Servir con nginx o similar
+# TODO: Añadir configuración de nginx
+```
